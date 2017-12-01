@@ -11,7 +11,7 @@ GEM
       multipart-post (>= 1.2, < 3)
     ffi (1.9.3)
     multipart-post (2.0.0)
-    newrelic_rpm (3.8.1.221)
+    newrelic_rpm (4.6.0.338)
     puma (2.6.0)
       rack (>= 1.1, < 2.0)
     rack (1.6.8)
