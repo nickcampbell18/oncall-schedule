@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Who's on Call?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+  <link href='global.css' rel='stylesheet' type='text/css'>
+  </style>
+</head>
+
+<% index_to_word = Proc.new {|index| %w[primary secondary][index] } %>
+
+<body>
+  <div class="pure-g-r">
+
+  <% @users.each do |group, users| %>
+    <% next if users.compact.none? # No point showing empty groups %>
+    <section class="pure-u-1-4">
+      <h4 class="uppercase group <%= group %>"><%= group %></h4>
+      <% users.each_with_index do |user, index| %>
+        <% title = index_to_word.(index) %>
+        <h1 class="user <%= title %>">
+          <%= user || "nobody :-(" %>
+          <small class="title"><%= title %></small>
+        </h1>
+      <% end %>
+    </section>
+  <% end %>
+
+  </div>
+</body>
+</html>

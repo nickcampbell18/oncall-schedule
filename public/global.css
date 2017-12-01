@@ -1,0 +1,50 @@
+  html, button, input, select, textarea,
+  .pure-g [class *= "pure-u"],
+  .pure-g-r [class *= "pure-u"] {
+      /* Set your content font stack here: */
+      font-family: 'Lato', sans-serif;
+  }
+  html, body, .pure-g {
+    height: 100%;
+    background-color: #222;
+    color: #F5F5F5;
+  }
+  section.pure-u-1-4 {
+    display: table-cell;
+    vertical-align: middle;
+    height: 50%;
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+  }
+  section h1, section h4 {
+    margin-bottom: 0.1em;
+  }
+
+
+  section .group {
+    font-size: 2em;
+  }
+  section .group.team_one {
+    color: #BE80FF;
+  }
+
+  section .user.primary {
+    font-size: 2.5em;
+  }
+  section .user.secondary {
+    font-size: 2em;
+    color: rgba(255,255,255,0.);
+  }
+
+
+  section .title {
+    color: rgba(255,255,255, 0.4);
+  }
+
+  .user.secondary .title {
+    color: rgba(255,255,255,0.2);
+  }
+  section .uppercase {
+    text-transform: uppercase;
+  }
