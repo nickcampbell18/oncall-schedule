@@ -3,7 +3,7 @@ ruby '2.4.2'
 
 # For REST queries
 gem 'faraday', '~> 0.9.0'
-gem 'typhoeus', '~> 0.6.8'
+gem 'typhoeus', '~> 1.3.0'
 
 # Fast threaded server
 gem 'puma', '~> 2.6.0'
