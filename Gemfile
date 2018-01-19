@@ -6,7 +6,7 @@ gem 'faraday', '~> 0.9.0'
 gem 'typhoeus', '~> 0.6.8'
 
 # Fast threaded server
-gem 'puma', '~> 2.6.0'
+gem 'puma', '~> 3.11.1'
 
 gem 'sinatra', '~> 1.4.8'
 
