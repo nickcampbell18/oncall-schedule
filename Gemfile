@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.4.2'
 
 # For REST queries
-gem 'faraday', '~> 0.9.0'
+gem 'faraday', '~> 0.14.0'
 gem 'typhoeus', '~> 0.6.8'
 
 # Fast threaded server
