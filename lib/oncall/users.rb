@@ -26,22 +26,24 @@ module OnCall
 
     def self.http_call(id)
       OnCall.adapter.get do |c|
-        c.url "/api/v1/schedules/#{id}/entries"
-        c.params = { since: current_time,
-                     until: current_time,
-                     overflow: true }
+        c.url "/schedules/#{id}/users"
+        c.params = { since: minute_ago,
+                     until: current_time }
       end
     end
 
     def self.from_entries(hash)
-      entries = JSON.parse(hash).fetch('entries')
-      entries.fetch(0, {}).fetch('user', {})
+      entries = JSON.parse(hash).fetch('users')
+      entries.fetch(0, {})
     end
 
     def self.current_time
       URI.escape Time.now.iso8601
     end
 
+    def self.minute_ago
+      URI.escape (Time.now - 60).iso8601
+    end
   end
 
 end
